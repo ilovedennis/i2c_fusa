@@ -47,7 +47,7 @@ run: $(OUT_FILE)
 .PHONY: questa
 questa: prepare
 	$(VLIB) work
-	$(VLOG) -sv -I../rtl -I../rtl/prim_cell -f $(FLIST) tb.sv
+	$(VLOG) -sv +incdir+../rtl +incdir+../rtl/prim_cell -f $(FLIST) tb.sv
 	$(VSIM) -c -do "run -all; quit" $(TOP)
 
 .PHONY: wave
