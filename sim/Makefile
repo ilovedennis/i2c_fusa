@@ -60,7 +60,7 @@ lint: prepare
 
 .PHONY: clean
 clean:
-	rm -f $(OUT_FILE) $(VCD_FILE) tc/test_pattern.sv
+	rm -f $(OUT_FILE) $(VCD_FILE)
 	rm -rf work transcript vsim.wlf
 
 .PHONY: help
