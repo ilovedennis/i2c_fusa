@@ -6,3 +6,4 @@ GEMINI.md
 sim/work/
 sim/transcript
 sim/vsim.wlf
+sim/tc/test_pattern.sv

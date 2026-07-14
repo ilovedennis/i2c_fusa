@@ -92,7 +92,7 @@ module tb;
   logic [31:0] rdata;
 
   initial begin
-    `include "tc/tc_i2c_basic.sv"
+    `include "tc/test_pattern.sv"
   end
 
 endmodule
