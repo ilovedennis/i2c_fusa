@@ -1,2 +1,7 @@
 GEMINI.md
 *.md
+sim/sim.vvp
+sim/*.vcd
+sim/work/
+sim/transcript
+sim/vsim.wlf

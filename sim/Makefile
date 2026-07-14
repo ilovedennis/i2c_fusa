@@ -20,6 +20,7 @@ VFLAGS := \
   -Wno-timescale \
   -Wno-portbind \
   -I../rtl \
+  -I../rtl/prim_cell \
   -DIVERILOG
 
 .PHONY: all
@@ -35,7 +36,7 @@ run: $(OUT_FILE)
 .PHONY: questa
 questa:
 	$(VLIB) work
-	$(VLOG) -sv -I../rtl -f $(FLIST) tb.sv
+	$(VLOG) -sv -I../rtl -I../rtl/prim_cell -f $(FLIST) tb.sv
 	$(VSIM) -c -do "run -all; quit" $(TOP)
 
 .PHONY: wave
@@ -44,7 +45,7 @@ wave: $(VCD_FILE)
 
 .PHONY: lint
 lint:
-	$(VERILATOR) --lint-only -sv --top-module i2c_apb -I../rtl -Wno-fatal -f $(FLIST)
+	$(VERILATOR) --lint-only -sv --top-module i2c_apb -I../rtl -I../rtl/prim_cell -Wno-fatal -f $(FLIST)
 
 .PHONY: clean
 clean:
