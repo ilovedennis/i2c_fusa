@@ -30,8 +30,8 @@ module i2c #(
   output logic          pslverr_o,
 
   // Alerts
-  input  prim_alert_pkg::alert_rx_t [NumAlerts-1:0] alert_rx_i,
-  output prim_alert_pkg::alert_tx_t [NumAlerts-1:0] alert_tx_o,
+  input  prim_alert_pkg::alert_rx_t [i2c_reg_pkg::NumAlerts-1:0] alert_rx_i,
+  output prim_alert_pkg::alert_tx_t [i2c_reg_pkg::NumAlerts-1:0] alert_tx_o,
 
   // RACL interface
   input  top_racl_pkg::racl_policy_vec_t racl_policies_i,
